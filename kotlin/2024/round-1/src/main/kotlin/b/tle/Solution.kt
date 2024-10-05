@@ -1,4 +1,4 @@
-package b
+package b.tle
 
 import kotlin.math.sqrt
 
@@ -16,15 +16,16 @@ fun testCase(tti: Int, primesTo10000000: List<Int>) {
     val nn = readln().toInt()
 
     val primesToN = primesTo10000000.takeWhile { it <= nn }
-    //val twoOrNull = primesToN.firstOrNull()
-    val subtractorizationsHasTwo = /*twoOrNull !== null &&*/ nn >=5
 
-    val oddPrimesToN = primesToN.drop(1)
-    val oddNSubtractorizations = oddPrimesToN.asSequence().zipWithNext().filter {
-        it.second - it.first == 2
-    }
+    val diffs =
+        primesToN.asSequence()
+            .flatMap { p1 -> primesToN.asSequence().takeWhile { p2 -> p2 < p1 }.map { p2 -> p1 - p2 } }
+            .toSet()
+    //.also { println(it) }
 
-    val y = (if (subtractorizationsHasTwo) 1 else 0) + oddNSubtractorizations.count()
+    val nSubtractorizations = primesToN.toSet() intersect diffs
+
+    val y = nSubtractorizations.count()
     println("Case #${tti + 1}: $y")
 }
 

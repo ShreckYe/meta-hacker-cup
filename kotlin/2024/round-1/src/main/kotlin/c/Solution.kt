@@ -6,12 +6,10 @@ fun main() {
 }
 
 fun testCase(tti: Int) {
-    TODO("read input")
-    //val _ = readln().toInt()/.toLong()
-    //val _ = readln().splitToSequence(' ').map { it.toInt()/.toLong() }.toList()
+    val (ww, gg, ll) = readln().splitToSequence(' ').map { it.toLong() }.toList()
 
-    TODO("compute")
+    val oneUnitAvg = 2 * ll + 1
+    val y = (ww - gg).toBigInteger() * oneUnitAvg.toBigInteger() % 998244353.toBigInteger()
 
-    val y = TODO()
     println("Case #${tti + 1}: $y")
 }
