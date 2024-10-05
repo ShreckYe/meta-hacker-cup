@@ -1,4 +1,4 @@
-package b
+package a
 
 fun main() {
     val tt = readln().toInt()
