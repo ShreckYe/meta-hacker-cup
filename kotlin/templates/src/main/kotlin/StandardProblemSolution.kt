@@ -1,12 +1,12 @@
 fun main() {
-    val tt = readLine()!!.toInt()
+    val tt = readln().toInt()
     repeat(tt, ::testCase)
 }
 
 fun testCase(tti: Int) {
     TODO("read input")
-    //val _ = readLine()!!.toInt()/.toLong()
-    //val _ = readLine()!!.splitToSequence(' ').map { it.toInt()/.toLong() }.toList()
+    //val _ = readln().toInt()/.toLong()
+    //val _ = readln().splitToSequence(' ').map { it.toInt()/.toLong() }.toList()
 
     TODO("compute")
 
