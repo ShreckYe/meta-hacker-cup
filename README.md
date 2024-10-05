@@ -1,3 +1,3 @@
-# Codeforces
+# Meta Hacker Cup
 
-My Codeforces solutions
+My Meta Hacker Cup solutions
