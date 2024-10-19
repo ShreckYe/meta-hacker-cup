@@ -6,3 +6,4 @@ rootProject.name = "meta-hacker-cup-kotlin"
 include("templates")
 include("2024:practice-round")
 include("2024:round-1")
+include("2024:round-2")
